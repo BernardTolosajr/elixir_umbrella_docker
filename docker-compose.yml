@@ -1,0 +1,7 @@
+version: '3'
+services:
+  umbrella:
+    build: .
+    env_file: .env
+    ports:
+      - "9000:9000"
