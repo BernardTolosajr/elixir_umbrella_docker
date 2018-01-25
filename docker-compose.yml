@@ -5,3 +5,13 @@ services:
     env_file: .env
     ports:
       - "9000:9000"
+    networks:
+      - frontend
+      - backend
+  redis:
+    image: redis:latest
+    networks:
+      - backend
+networks:
+  backend:
+  frontend:
